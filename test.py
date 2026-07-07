@@ -38,6 +38,8 @@ class CreateCourse(BaseModel):
     course_name : str = Field(... , min_length=5)
     duration_hours : int = Field(... , gt=0)
     price : int = Field(... , ge=0)
+    status : str = 'active'
+    created_at : str
     
     
 def api_repoint(req: Request , status_code : int , message : str , data = None , error = None):
